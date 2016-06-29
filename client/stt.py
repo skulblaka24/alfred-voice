@@ -301,7 +301,7 @@ class GoogleSTT(AbstractSTTEngine):
 
     SLUG = 'google'
 
-    def __init__(self, api_key=None, language='en-us'):
+    def __init__(self, api_key=None, language='fr-fr'): # en-us
         # FIXME: get init args from config
         """
         Arguments:

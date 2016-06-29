@@ -48,8 +48,8 @@ class Mic:
 
         # TODO: Consolidate variables from the next three functions
         THRESHOLD_MULTIPLIER = 1.8
-        RATE = 16000
-        CHUNK = 1024
+        RATE = 44100 # By default : 16000
+        CHUNK = 512 # 1024
 
         # number of seconds to allow to establish threshold
         THRESHOLD_TIME = 1
@@ -92,15 +92,15 @@ class Mic:
         needs to be restarted.
         """
 
-        THRESHOLD_MULTIPLIER = 1.8
-        RATE = 16000
-        CHUNK = 1024
+        THRESHOLD_MULTIPLIER = 1.8 # 1.8
+        RATE = 44100 # By default : 16000
+        CHUNK = 512 # 1024
 
         # number of seconds to allow to establish threshold
-        THRESHOLD_TIME = 1
+        THRESHOLD_TIME = 1 # 1
 
         # number of seconds to listen before forcing restart
-        LISTEN_TIME = 10
+        LISTEN_TIME = 10 # 10
 
         # prepare recording stream
         stream = self._audio.open(format=pyaudio.paInt16,
@@ -157,7 +157,7 @@ class Mic:
         frames = frames[-20:]
 
         # otherwise, let's keep recording for few seconds and save the file
-        DELAY_MULTIPLIER = 1
+        DELAY_MULTIPLIER = 1 # 1
         for i in range(0, RATE / CHUNK * DELAY_MULTIPLIER):
 
             data = stream.read(CHUNK)
@@ -202,9 +202,9 @@ class Mic:
             Returns a list of the matching options or None
         """
 
-        RATE = 16000
-        CHUNK = 1024
-        LISTEN_TIME = 12
+        RATE = 44100 # By default : 16000
+        CHUNK = 512 # 1024
+        LISTEN_TIME = 12 # 12
 
         # check if no threshold provided
         if THRESHOLD is None:
@@ -222,7 +222,7 @@ class Mic:
         frames = []
         # increasing the range # results in longer pause after command
         # generation
-        lastN = [THRESHOLD * 1.2 for i in range(30)]
+        lastN = [THRESHOLD * 1.2 for i in range(300)] # [THRESHOLD * 1.2 for i in range(30)]
 
         for i in range(0, RATE / CHUNK * LISTEN_TIME):
 

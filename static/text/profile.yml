@@ -1,0 +1,147 @@
+carrier: phonenumber@sfr.fr
+first_name: 
+gmail_address: 
+gmail_password: 
+last_name: 
+location: France/Paris
+
+#http://www.wunderground.com/about/faq/international_cities.asp
+# Paris Weather Location
+wmo_id: 07157
+# Lyon Weather Location
+#wmo_id: 07480
+
+phone_number: ''
+prefers_email: true
+timezone: Europe/Paris
+keys:
+     FB_TOKEN: 
+
+##################################################################################################
+
+#				     Speech to text engine
+
+##################################################################################################
+
+#stt_engine: sphinx
+#pocketsphinx:
+#  fst_model: '/home/lab/phonetisaurus/g014b2b.fst'                              #optional
+#  hmm_dir: '/usr/local/share/pocketsphinx/model/hmm/en_US/hub4wsj_sc_8k' #optional
+
+
+#stt_engine: julius
+#julius:
+#  hmmdefs:  '/path/to/your/hmmdefs'
+#  tiedlist: '/path/to/your/tiedlist'
+#  lexicon:  '/path/to/your/lexicon.tgz'
+#  lexicon_archive_member: 'VoxForge/VoxForgeDict' # only needed if lexicon is a tar/tar.gz archive
+
+
+#You need an Google Speech API key to use this. To obtain an API key, join the Chromium Dev group and create a project through the Google Developers console.
+#Then select your project. In the sidebar, navigate to “APIs & Auth.” and activate the Speech API. Under “APIs & Auth,” navigate to “Credentials.” Create a new key for public API access.
+
+stt_engine: google
+keys:
+    #GOOGLE_SPEECH: 'AIzaSyBmUbyzRXwhprijQGU0789vT_B2sTO6UbvGQ' # Ma clé d'api disponible à https://console.developers.google.com/apis/credentials?project=alfred-128289
+    GOOGLE_SPEECH: 'AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw' # Clé d'api chronium inconnu
+    language: 'fr'
+
+#The AT&T STT engine requires an AT&T app_key/app_secret to be present in profile.yml. Please sign up at http://developer.att.com/apis/speech and create a new app. 
+#You can then take the app_key/app_secret
+
+#stt_engine: att
+#att-stt:
+#  app_key:    4xxzd6abcdefghijklmnopqrstuvwxyz
+#  app_secret: 6o5jgiabcdefghijklmnopqrstuvwxyz
+
+
+#This implementation requires an Wit.ai Access Token to be present in profile.yml. 
+#Please sign up at https://wit.ai and copy your instance token, which can be found under Settings in the Wit console to your profile.yml:
+
+#stt_engine: witai
+#witai-stt:
+#  access_token:    ERJKGE86SOMERANDOMTOKEN23471AB
+
+
+##################################################################################################
+
+#                                    Text to speech engine
+
+##################################################################################################
+
+#tts_engine: espeak-tts
+#espeak-tts:
+#  voice: 'default+m3'   # optional
+#  pitch_adjustment: 40  # optional
+#  words_per_minute: 160 # optional
+
+
+#You need to install festival (and festival’s voices). If you’ve done that, you can set festival-tts as you TTS engine in your profile.yml
+#http://jasperproject.github.io/documentation/installation/#installing-festival
+#If you change the default voice of festival, Jasper will use this voice as well
+# Installed Already
+
+#tts_engine: festival-tts
+
+
+#To get a list of available voices, run flite -lv on the command line
+#Voices available: kal awb_time kal16 awb rms slt
+# Installed Already
+
+#tts_engine: flite-tts
+#flite-tts:
+#  voice: 'rms'
+
+
+#Install Pico Then, you just add it to your profile.yml:
+#http://jasperproject.github.io/documentation/installation/#installing-pico
+# Installed Already
+
+#tts_engine: pico-tts
+
+#Install the required dependencies for Google TTS. Then set google-tts as you TTS engine in your profile.yml
+#http://jasperproject.github.io/documentation/installation/#installing-googletts
+# Installed Already
+
+tts_engine: google-tts
+google-tts:
+  language: 'fr'
+
+
+#Install the required dependencies for accessing Amazon’s Ivona Speech Cloud service. You’ll also need to sign up for free to use their service. 
+#Then set ivona-tts as your TTS engine in your profile.yml and also paste your Ivona Speech Cloud keys:
+#http://jasperproject.github.io/documentation/installation/#installing-ivonatts
+# Installed already
+
+#tts_engine: ivona-tts
+#ivona-tts:
+#  # Keys can be obtained via:
+#  # https://www.ivona.com/us/account/speechcloud/creation/
+#  access_key: 'access_key' # required
+#  secret_key: 'secret_key' # required
+#  voice: 'Eric'            # optional, default is 'Brian'
+#  region: 'eu-west'        # optional, default is 'us-east'
+#  speech_rate: 'medium'    # optional
+#  sentence_break: 400      # optional
+
+
+#Simply set mary-tts as you TTS engine in your profile.yml. If you want, you can also change the default server to your own MaryTTS server:
+#Note: Currently, the demo server at mary.dfki.de:59129 is not working, so you need to set up your own MaryTTS server (which you can download here).
+#http://mary.dfki.de:59125/
+#http://mary.dfki.de/download/index.html
+
+#tts_engine: mary-tts
+#mary-tts:
+#  server: 'mary.dfki.de'
+#  port: '59125'
+#  language: 'en_GB'
+#  voice: 'dfki-spike'
+
+
+#Make sure that you’re about to run Jasper on a Mac. Look at the casing of your computer, there should a bitten apple symbol on it. 
+#Then set osx-tts as you TTS engine in your profile.yml:
+
+#tts_engine: osx-tts
+
+
+

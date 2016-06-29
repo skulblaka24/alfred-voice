@@ -35,5 +35,7 @@ Phrase d'incomprehension: 		Dans conversation.py
 # A venir:
 
 Intégration de cloud-kit pour des notifications provenant de icloud
+
 Traduction des modules en français
+
 Création d'un modules pour permettre la configuration depuis alfred server.

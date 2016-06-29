@@ -108,20 +108,20 @@ class Jasper(object):
 
     def run(self):
         if 'first_name' in self.config:
-            salutation = ("How can I be of service, %s?"
-                          % self.config["first_name"])
+            salutation = ("Bonjour Monsieur, Comment puis-je vous aider?") #("How can I be of service, %s?"
+                          #% self.config["first_name"])
         else:
-            salutation = "How can I be of service?"
+            salutation = "Bonjour Monsieur, Comment puis-je vous aider?"
         self.mic.say(salutation)
 
-        conversation = Conversation("JASPER", self.mic, self.config)
+        conversation = Conversation("ALFRED", self.mic, self.config)
         conversation.handleForever()
 
 if __name__ == "__main__":
 
     print("*******************************************************")
-    print("*             JASPER - THE TALKING COMPUTER           *")
-    print("* (c) 2015 Shubhro Saha, Charlie Marsh & Jan Holthuis *")
+    print("*             Alfred - THE TALKING COMPUTER           *")
+    print("*              (c) 2015 Gauthier Donikian             *")
     print("*******************************************************")
 
     logging.basicConfig()

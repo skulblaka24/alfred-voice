@@ -18,7 +18,7 @@ Temps d'attente pour la cmd vocale :		Dans mic.py >> [THRESHOLD * 1.2 for i in r
 Langage STT Google : 						Dans stt.py >> def __init__(self, api_key=None, language='fr-fr'): # en-us
 
 
-Langage TTS Google : 						Dans profile.xml
+Langage TTS Google : 						Dans profile.yml
 											....
 											tts_engine: google-tts
 											google-tts:

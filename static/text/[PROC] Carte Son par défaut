@@ -1,0 +1,21 @@
+#####################################################################
+
+				Carte Son par défaut Linux
+
+#####################################################################
+
+Create ou edit /root/.asoundrc file, edit the hw:x,y text accordingly.
+
+pcm.!default {
+         type asym
+         playback.pcm {
+                 type plug
+                 slave.pcm "hw:0,0"
+         }
+         capture.pcm {
+                 type plug
+                 slave.pcm "hw:1,0"
+         } 
+ }
+
+Reboot ?

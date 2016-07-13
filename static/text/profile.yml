@@ -42,7 +42,6 @@ keys:
 
 stt_engine: google
 keys:
-    #GOOGLE_SPEECH: 'AIzaSyBmUbyzRXwhprijQGU0789vT_B2sTO6UbvGQ' # Ma clé d'api disponible à https://console.developers.google.com/apis/credentials?project=alfred-128289
     GOOGLE_SPEECH: 'AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw' # Clé d'api chronium inconnu
     language: 'fr'
 

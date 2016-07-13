@@ -4,32 +4,37 @@ Alfred is an open source platform for developing always-on, voice-controlled app
 
 Learn more at jasperproject.github.io, where we have assembly and installation instructions, as well as extensive documentation. For the relevant disk image, please visit SourceForge.
 
-# Configuration Tips
+#  Aide de Configuration
 
-Microphone: 					Use of pyaudio, configured in mic.py / Ajustement du RATE, CHUNK et temps d'enregistrement.
+Microphone: 								Use of pyaudio, configured in mic.py / Ajustement du RATE, CHUNK et temps d'enregistrement.
+											pyaudio prend la carte son par défaut du système (cf /static/text/[PROC] Carte son par défaut)
 
-Speaker: 						Use of aplay, configured in tts.py
-								On y change la carte son par exemple hw0:0 ou hw1:0
+Speaker: 									Use of aplay, configured in tts.py
+											On y change la carte son par exemple hw0:0 ou hw1:0
 
-Temps d'attente de la cmd :		Dans mic.py : [THRESHOLD * 1.2 for i in range(< ## ICI ## >)] Par defaut 30 pour un rate de 16000 mais pour un rate de 44100, 200 
-
-
-Langage STT Google : 			Dans stt.py / def __init__(self, api_key=None, language='fr-fr'): # en-us
+Temps d'attente pour la cmd vocale :		Dans mic.py >> [THRESHOLD * 1.2 for i in range(< ## ICI ## >)] # Par defaut 30 pour un rate de 16000 mais pour un rate de 44100,200 
 
 
-Language TTS Google : 			Dans profile.xml
-								....
-								tts_engine: google-tts
-								google-tts:
-					  			language: 'fr'
-								....
+Langage STT Google : 						Dans stt.py >> def __init__(self, api_key=None, language='fr-fr'): # en-us
 
 
-Keyword d'activation : 			Dans jasper.py
+Langage TTS Google : 						Dans profile.xml
+											....
+											tts_engine: google-tts
+											google-tts:
+					  						language: 'fr'
+											....
 
-Phrase d'amorce : 				Dans jasper.py
 
-Phrase d'incomprehension: 		Dans conversation.py
+Keyword d'activation : 						Dans jasper.py
+
+Phrase d'amorce : 							Dans jasper.py
+
+Phrase d'incomprehension: 					Dans conversation.py
+
+Exemple profile.yml :						/static/text/ # Complétez les champs vides.
+
+Ajout d'extension : 							/client/modules/
 
 
 # A venir:

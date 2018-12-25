@@ -1,10 +1,14 @@
 # Alfred Voice
+==============
 
 Alfred is an open source platform for developing always-on, voice-controlled applications.
 
 Learn more at jasperproject.github.io, where we have assembly and installation instructions, as well as extensive documentation. For the relevant disk image, please visit SourceForge.
 
+Is used in the alfred-voice-docker repository
+
 # Aide de Configuration
+-----------------------
 
 Microphone: 								Use of pyaudio, configured in mic.py / Ajustement du RATE, CHUNK et temps d'enregistrement.
 											pyaudio prend la carte son par défaut du système (cf /static/text/[PROC] Carte son par défaut)
@@ -38,6 +42,7 @@ Exemple profile.yml :						/static/text/ # Complétez les champs vides.
 Ajout d'extension : 						/client/modules/
 
 # Commandes de test du son
+--------------------------
 
 Voir les cartes: 	$ cat /proc/asound/cards
 					$ arecord -l
